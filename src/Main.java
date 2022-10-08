@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -38,5 +40,60 @@ public class Main {
 
         numbers.insertAt(3, 1);
         numbers.print();
+
+        //LINKED LIST EXCERCISES
+        var list = new LinkedList();
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        int a = 30;
+        System.out.println("index of " + a + " = " + list.indexOf(a));
+        System.out.println("contains: " + a + "? " + list.contains(a));
+        list.removeFirst();
+
+        System.out.println("Removed first. Contains " + a + "? "+ list.contains(a));
+        System.out.println("Add first: 10");
+        list.addFirst(10);
+        System.out.println("Contains 10? " +list.contains(10));
+        System.out.println("Removed last: 30");
+        list.removeLast();
+        System.out.println("Index of "+ a + ": "+ list.indexOf(a));
+        System.out.println("Contains " + a + ": " + list.contains(a));
+
+        System.out.println("Removed last: 20");
+        list.removeLast();
+        System.out.println("?20: "+ list.contains(20));
+        System.out.println(list.size());
+
+        System.out.println("Removed last: 10");
+        list.removeLast();
+        System.out.println("?10: "+ list.contains(10));
+        System.out.println(list.size());
+
+        System.out.println(list.size());
+        list.addLast(10);
+        System.out.println(list.size());
+        list.addFirst(5);
+        list.addLast(15);
+        list.addLast(20);
+        list.addLast(25);
+        list.addLast(30 );
+
+        var array2 = list.toArray();
+        System.out.println(Arrays.toString(array2));
+        System.out.println("middle: ");
+        list.printMiddle2();
+        list.reverse();
+        System.out.println("list reversed");
+        var array3 = list.toArray();
+        System.out.println(Arrays.toString(array3));
+        System.out.println("size of list: " + list.size());
+
+
+        int k = 3;
+        System.out.println("Value of " + k + "-th Node from the end is: " + list.getKthFromTheEnd(k));
+
+
+
     }
 }
