@@ -93,6 +93,37 @@ public class Main {
         int k = 3;
         System.out.println("Value of " + k + "-th Node from the end is: " + list.getKthFromTheEnd(k));
 
+        System.out.println("List1 Has loop?" + list.hasLoop());
+        var list2 = LinkedList.createWithLoop();
+        System.out.println("Has loop?" + list2.hasLoop());
+
+        String test = "testowy";
+        StringReversal testowy = new StringReversal();
+        String test2 = testowy.reverse(test);
+        System.out.println(test2);
+
+        Expression exp = new Expression();
+//        String test3 = "(23+32*(2+2)+ (2*2)))";
+        String test3 = "(1< +2>)";
+        System.out.println("Is expression: " + test3 + " valid? " + exp.isValid(test3));
+
+        Expression exp2 = new Expression();
+        System.out.println("Is expression: " + test3 + " valid? " + exp2.isBalanced(test3));
+
+
+        Stack2 stack2 = new Stack2();
+
+        stack2.push(1);
+        stack2.push(2);
+        stack2.push(3);
+        stack2.push(4);
+        System.out.println(stack2);
+        System.out.println(stack2.pop());
+        System.out.println(stack2.pop());
+        System.out.println(stack2.peek());
+        stack2.pop();
+        System.out.println(stack2.peek());
+        stack2.pop();
 
 
     }

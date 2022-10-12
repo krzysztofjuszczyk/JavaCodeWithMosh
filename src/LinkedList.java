@@ -356,8 +356,41 @@ public class LinkedList {
             next = curr.next;
         }
         first = curr;
+    }
+    public boolean hasLoop() {
+
+
+        var slow = first;
+        var fast = first;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
 
     }
+
+    public static LinkedList createWithLoop() {
+        var list2 = new LinkedList();
+        list2.addLast(10);
+        list2.addLast(20);
+        list2.addLast(30);
+
+        // Get a reference to 30
+        var node = list2.last;
+
+        list2.addLast(40);
+        list2.addLast(50);
+
+        // Create the loop
+        list2.last.next = node;
+
+        return list2;
+    }
+
 
 }
 
