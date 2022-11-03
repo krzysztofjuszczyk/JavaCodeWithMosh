@@ -125,6 +125,11 @@ public class Main {
         System.out.println(stack2.peek());
         stack2.pop();
 
-
+        MyHashTable myHashTable = new MyHashTable();
+        myHashTable.put(6, "A");
+        myHashTable.put(8, "B");
+        myHashTable.put(11, "C");
+        System.out.println(myHashTable.get(6));
+        System.out.println(myHashTable);
     }
 }
